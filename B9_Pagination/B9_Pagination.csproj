@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9</LangVersion>
+    <PackageTags>pager, pagination, paginator, b9, B9, B9_Pagination, Pagination_B9</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Chepa Bohdan (B9)</Authors>
+    <Product>Pagination</Product>
+    <Company>B9</Company>
+    <PackageId>B9_Pagination</PackageId>
+    <UserSecretsId>c93ff0b3-6b49-4442-bc6e-d240e2d33ed8</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
+  </ItemGroup>
+
+</Project>
