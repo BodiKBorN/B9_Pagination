@@ -1,18 +1,18 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Pagination_B9.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 namespace B9_Pagination
 {
     public static class PaginationExtension
     {
         /// <summary>
+        /// Gets paginated items and map to another type if need.
         /// Before use Pagination need ordered items!
-        /// Get paginated items and map to another type if need.
         /// </summary>
         /// <typeparam name="TResult"></typeparam>
         /// <param name="items"></param>
@@ -25,11 +25,20 @@ namespace B9_Pagination
             return GetPaginationWithMapAsync<TResult>(items, pagination.PageNumber, pagination.PageSize, mapper);
         }
 
+        /// <summary>
+        /// Gets paginated items and map to another type if need.
+        /// Before use Pagination need ordered items!
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="items"></param>
+        /// <param name="pagination"></param>
+        /// <param name="configurationProvider"></param>
+        /// <returns></returns>
         public static async Task<IPagination<TResult>> GetPaginationWithMapAsync<TResult>(this IQueryable<object> items, PaginationQuery pagination, IConfigurationProvider configurationProvider) where TResult : class
         {
             pagination ??= PaginationQuery.Default;
 
-            var pager = await items.GetPagerAsync<TResult>(pagination.PageNumber, pagination.PageSize);
+            var pager = await items.GetPagerAsync<TResult>(pagination);
 
             if (!pager.IsValidPage)
                 return pager.GetEmptyPagination();
@@ -48,8 +57,8 @@ namespace B9_Pagination
         }
 
         /// <summary>
+        /// Gets paginated items and map to another type if need.
         /// Before use Pagination need ordered items!
-        /// Get paginated items and map to another type if need.
         /// </summary>
         /// <typeparam name="TResult"></typeparam>
         /// <param name="items"></param>
@@ -74,8 +83,22 @@ namespace B9_Pagination
         }
 
         /// <summary>
+        /// Gets paginated items in the same type.
         /// Before use Pagination need ordered items!
-        /// Get paginated items in the same type.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="items"></param>
+        /// <param name="pagination"></param>
+        /// <returns></returns>
+        public static Task<IPagination<T>> GetPaginationAsync<T>(this IQueryable<T> items, PaginationQuery pagination) where T : class
+        {
+            pagination ??= PaginationQuery.Default;
+            return items.GetPaginationAsync<T>(pagination.PageNumber, pagination.PageSize);
+        }
+
+        /// <summary>
+        /// Gets paginated items in the same type.
+        /// Before use Pagination need ordered items!
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="items"></param>
@@ -95,20 +118,20 @@ namespace B9_Pagination
         }
 
         /// <summary>
-        /// Get Pager with type T
+        /// Gets Pager with type T
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="items"></param>
         /// <param name="pagination"></param>
         /// <returns></returns>
-        public static async Task<Pager<T>> GetPagerAsync<T>(this IQueryable<object> items, PaginationQuery pagination) where T : class
+        public static Task<Pager<T>> GetPagerAsync<T>(this IQueryable<object> items, PaginationQuery pagination) where T : class
         {
             pagination ??= PaginationQuery.Default;
-            return new Pager<T>(await items.CountAsync(), pagination.PageNumber, pagination.PageSize);
+            return items.GetPagerAsync<T>(pagination.PageNumber, pagination.PageSize);
         }
 
         /// <summary>
-        /// Get Pager with type T
+        /// Gets Pager with type T
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="items"></param>
@@ -119,7 +142,7 @@ namespace B9_Pagination
           => new Pager<T>(await items.CountAsync(), pageNumber, pageSize);
 
         /// <summary>
-        /// Get paginated items
+        /// Gets paginated items
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="items"></param>
