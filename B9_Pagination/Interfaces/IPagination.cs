@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Pagination_B9.Interfaces
+namespace B9_Pagination.Interfaces
 {
     public interface IPagination<TData> where TData : class
     {

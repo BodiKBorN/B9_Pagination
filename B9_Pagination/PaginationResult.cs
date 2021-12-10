@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Pagination_B9.Interfaces;
+using B9_Pagination.Interfaces;
 
 namespace B9_Pagination
 {
