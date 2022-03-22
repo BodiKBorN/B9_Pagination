@@ -4,9 +4,17 @@
     <projectFile>B9_Pagination.Sample/B9_Pagination.Sample.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="017515e1-3896-4c3f-ac19-460e527b791f" name="Changes" comment="">
+    <list default="true" id="017515e1-3896-4c3f-ac19-460e527b791f" name="Changes" comment="refactor">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.B9_Pagination/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.B9_Pagination/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B9_Pagination.sln" beforeDir="false" afterPath="$PROJECT_DIR$/B9_Pagination.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B9_Pagination/B9_Pagination.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/B9_Pagination/Interfaces/IPagination.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/B9_Pagination/Pager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/B9_Pagination/PaginationExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/B9_Pagination/PaginationQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/B9_Pagination/PaginationResult.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/B9_Pagination/icon_B9.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/samples/B9_Pagination.Sample/B9_Pagination.Sample.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/samples/B9_Pagination.Sample/B9_Pagination.Sample.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/B9_Pagination.Sample/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/samples/B9_Pagination.Sample/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,37 +24,28 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="release/v2.0" />
+        <entry key="$PROJECT_DIR$" value="release/v1.3" />
       </map>
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/B9_Pagination/samples/B9_Pagination.Sample/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d4f6947cbfb9c4bd7df7262acbba1e6263548be59ba3909fbedc17176394fb/QueryableMethods.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/da6a1787df247a0274ec8fc4840f41df092ee13874f55f87a9db568acab1bd2/System.Reflection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/B9_Pagination/samples/B9_Pagination.Sample/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6837b9bf6a16516381fbda98badd549268e2e8876668ee7f1c53182a5ec81a/UnaryExpression.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/B9_Pagination/samples/B9_Pagination.Sample/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f237a55ab16d4649b96170604924f6b94bf450/29/4704afa1/QueryableExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4f6e34c5c23b4e3c809f907bf3c902ec503590/b9/e5a40e1d/IQueryProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ba371a7d1bce5754b4827ef495aa0978e957f9f9108b41594a236213813dd5/IAsyncQueryProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4bbbcae157124363c9f7547f03910fb579c098/Mock.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8fe5b9fa0d07425ba30fafd53baa5a7ea23880/6e/c8617d76/IAsyncEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/B9_Pagination/samples/B9_Pagination.Sample/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f237a55ab16d4649b96170604924f6b94bf450/60/9512ce1f/IDbAsyncEnumerator`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/744b39a97fda4484a500e339008e4f952000/10/e962b451/TestAsyncEnumerableEfCore`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8fe5b9fa0d07425ba30fafd53baa5a7ea23880/c2/b03515f5/IAsyncEnumerator`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/B9_Pagination/samples/B9_Pagination.Sample/TestingDemo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/B9_Pagination/samples/B9_Pagination.Sample/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f237a55ab16d4649b96170604924f6b94bf450/13/91e93307/IDbAsyncEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4c865cdb419f2327f5fb1039c1ddcdf913b075298368c738e1830d17cb350/LocalView.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/B9_Pagination/samples/B9_Pagination.Sample/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/B9_Pagination/samples/B9_Pagination.Sample/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f237a55ab16d4649b96170604924f6b94bf450/2a/e220ea07/IDbAsyncEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f237a55ab16d4649b96170604924f6b94bf450/c5/86917b61/IDbAsyncEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f237a55ab16d4649b96170604924f6b94bf450/bf/e762d894/IDbAsyncQueryProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/db5f89df1c97f4f6dc89cb5cc3f7076f2d05684e19a9df0af813e86bb4dbbf/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/B9_Pagination/samples/B9_Pagination.Sample/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0a25b67411194658a5f1f8a977443fab3adc80/2b/c28f7b29/IQueryable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c21cb73bdfbbbf58322fbb426c7dcfa285181e8fe5e3fe354b1f8ea5e3af2/EntityEntry`.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8fe5b9fa0d07425ba30fafd53baa5a7ea23880/fe/e21c84ac/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -56,11 +55,23 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0a25b67411194658a5f1f8a977443fab3adc80/22/34497bfd/IQueryProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26jcqVfT4EkCaQUjHsuiKHjDUWx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="XThreadsFramesViewSplitterKey" value="0.50581396" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="B9_Pagination.Sample" type="DotNetProject" factoryName=".NET Project">
@@ -82,8 +93,28 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="refactor">
+      <created>1647940383923</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647940383923</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="017515e1-3896-4c3f-ac19-460e527b791f" name="Changes" comment="refactor" />
+      <created>1647940638305</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647940638305</updated>
+      <workItem from="1647940830513" duration="641000" />
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
@@ -109,6 +140,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -117,10 +152,10 @@
           <line>16</line>
           <properties documentPath="D:\B9_Pagination\samples\B9_Pagination.Sample\Program.cs" initialLine="16" containingFunctionPresentation="">
             <startOffsets>
-              <option value="392" />
+              <option value="371" />
             </startOffsets>
             <endOffsets>
-              <option value="442" />
+              <option value="421" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />

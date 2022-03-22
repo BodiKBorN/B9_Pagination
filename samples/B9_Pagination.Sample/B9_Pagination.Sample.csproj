@@ -9,6 +9,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\B9_Pagination\B9_Pagination.csproj" />
+      <ProjectReference Include="..\..\src\B9_Pagination\B9_Pagination.csproj" />
     </ItemGroup>
 
     <ItemGroup>

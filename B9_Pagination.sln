@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B9_Pagination", "B9_Pagination\B9_Pagination.csproj", "{95615779-7A6A-43D3-8A41-0A772D4B07E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B9_Pagination", "src/B9_Pagination\B9_Pagination.csproj", "{95615779-7A6A-43D3-8A41-0A772D4B07E6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{A4EAED4C-B116-4B0F-8506-1001339EEB64}"
 EndProject
