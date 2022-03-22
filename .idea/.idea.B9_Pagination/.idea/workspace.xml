@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="017515e1-3896-4c3f-ac19-460e527b791f" name="Changes" comment="refactor">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.B9_Pagination/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.B9_Pagination/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B9_Pagination.sln" beforeDir="false" afterPath="$PROJECT_DIR$/B9_Pagination.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B9_Pagination/B9_Pagination.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/B9_Pagination/Interfaces/IPagination.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/B9_Pagination/Pager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/B9_Pagination/PaginationExtension.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/B9_Pagination/PaginationQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/B9_Pagination/PaginationResult.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/B9_Pagination/icon_B9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/B9_Pagination.Sample/B9_Pagination.Sample.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/samples/B9_Pagination.Sample/B9_Pagination.Sample.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/B9_Pagination.Sample/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/samples/B9_Pagination.Sample/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +28,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4f6e34c5c23b4e3c809f907bf3c902ec503590/b9/e5a40e1d/IQueryProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ba371a7d1bce5754b4827ef495aa0978e957f9f9108b41594a236213813dd5/IAsyncQueryProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4bbbcae157124363c9f7547f03910fb579c098/Mock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/B9_Pagination/samples/B9_Pagination.Sample/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8fe5b9fa0d07425ba30fafd53baa5a7ea23880/6e/c8617d76/IAsyncEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f237a55ab16d4649b96170604924f6b94bf450/60/9512ce1f/IDbAsyncEnumerator`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/744b39a97fda4484a500e339008e4f952000/10/e962b451/TestAsyncEnumerableEfCore`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -108,9 +101,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647940638305</updated>
-      <workItem from="1647940830513" duration="641000" />
+      <workItem from="1647940830513" duration="1201000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor">
+      <created>1647941773728</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647941773728</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,10 +152,10 @@
           <line>16</line>
           <properties documentPath="D:\B9_Pagination\samples\B9_Pagination.Sample\Program.cs" initialLine="16" containingFunctionPresentation="">
             <startOffsets>
-              <option value="371" />
+              <option value="393" />
             </startOffsets>
             <endOffsets>
-              <option value="421" />
+              <option value="443" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />

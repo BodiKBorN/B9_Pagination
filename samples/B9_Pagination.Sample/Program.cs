@@ -8,7 +8,7 @@ var range = Enumerable.Range(1, 39)
 
 var items = range.AsQueryable().BuildMockDbSet().Object;
 
-var pagination = new PaginationQuery(1, 10);
+var pagination = new PaginationQuery(pageNumber: 1, pageSize: 10);
 
 var paginationResult = await items
     .Where(x => x.Id > 10)
