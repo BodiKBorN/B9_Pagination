@@ -22,9 +22,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore --configuration $BUILD_CONFIG
+      run: dotnet build --configuration $BUILD_CONFIG --no-restore
     - name: Test
-      run: dotnet test /p:Configuration=$env:BUILD_CONFIG --no-build --verbosity normal
+      run: dotnet test --configuration $BUILD_CONFIG --no-build --verbosity normal
   publish-nuget:
     needs: build
     runs-on: ubuntu-latest
