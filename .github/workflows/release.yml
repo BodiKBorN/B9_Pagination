@@ -25,6 +25,18 @@ jobs:
       run: dotnet build --configuration $BUILD_CONFIG --no-restore
     - name: Test
       run: dotnet test --configuration $BUILD_CONFIG --no-build --verbosity normal
+      
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+      with:
+        nuget-api-key: ${{ secrets.NuGetAPIKey }}
+        nuget-version: 'latest'
+    - name: Restore dependencies
+      run: nuget restore $SOLUTION
+    - name: Publish
+      if: startsWith(github.ref, 'refs/heads/release')
+      run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json'
+      
   publish-nuget:
     needs: build
     runs-on: ubuntu-latest
@@ -35,11 +47,7 @@ jobs:
     steps:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.5
-    - name: Restore dependencies
-      run: nuget restore $SOLUTION
-    - name: Publish
-      if: startsWith(github.ref, 'refs/heads/release')
-      run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
+      
   create-github-release:
     needs: publish-nuget
     runs-on: ubuntu-latest
