@@ -34,7 +34,7 @@ jobs:
     - name: Restore dependencies
       run: nuget restore $SOLUTION
     - name: Publish
-      run: nuget push **\*.nupkg -source 'https://api.nuget.org/v3/index.json' --skip-duplicate
+      run: dotnet nuget push **\*.nupkg -source 'https://api.nuget.org/v3/index.json' --skip-duplicate
       
   publish-nuget:
     needs: build
