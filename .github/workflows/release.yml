@@ -34,8 +34,7 @@ jobs:
     - name: Restore dependencies
       run: nuget restore $SOLUTION
     - name: Publish
-      if: startsWith(github.ref, 'refs/heads/release')
-      run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json'
+      run: nuget push **\*.nupkg -source 'https://api.nuget.org/v3/index.json' --skip-duplicate
       
   publish-nuget:
     needs: build
