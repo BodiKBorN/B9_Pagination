@@ -25,16 +25,8 @@ jobs:
       run: dotnet build --configuration $BUILD_CONFIG --no-restore
     - name: Test
       run: dotnet test --configuration $BUILD_CONFIG --no-build --verbosity normal
-      
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.5
-      with:
-        nuget-api-key: ${{ secrets.NuGetAPIKey }}
-        nuget-version: 'latest'
-    - name: Restore dependencies
-      run: nuget restore $SOLUTION
     - name: Publish
-      run: nuget push **\*.nupkg -source 'https://api.nuget.org/v3/index.json'
+      run: dotnet nuget push **\*.nupkg --api-key ${{secrets.NUGET_API_KEY}} --source 'https://api.nuget.org/v3/index.json' --skip-duplicate
       
   publish-nuget:
     needs: build
