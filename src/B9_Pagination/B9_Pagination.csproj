@@ -1,25 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <LangVersion>default</LangVersion>
+    <PackageId>B9_Pagination</PackageId>
+    <PackageIcon>icon_B9.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageVersion>1.1.0</PackageVersion>
     <PackageTags>pager, pagination, paginator, b9, B9, B9_Pagination, Pagination_B9</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/BodiKBorN/B9_Pagination/blob/master/README.md</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>default</LangVersion>
     <Authors>Chepa Bohdan (B9)</Authors>
     <Product>Pagination</Product>
     <Company>B9</Company>
-    <PackageId>B9_Pagination</PackageId>
     <UserSecretsId>c93ff0b3-6b49-4442-bc6e-d240e2d33ed8</UserSecretsId>
     <Version>$(PackageVersion)</Version>
-    <PackageProjectUrl>https://github.com/BodiKBorN/B9_Pagination/blob/master/README.md</PackageProjectUrl>
     <RepositoryUrl>https://github.com/BodiKBorN/B9_Pagination</RepositoryUrl>
-    <PackageIcon>icon_B9.png</PackageIcon>
-    <PackageIconUrl />
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>Copyright (c) 2022 Chepa Bohdan (B9)</Copyright>
     <Description>Extensions for simple pagination</Description>
-    <PackageVersion>1.1.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -32,6 +33,7 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+    <None Include="..\..\README.md" Pack="true" PackagePath=""/>
   </ItemGroup>
 
 </Project>
