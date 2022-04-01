@@ -13,11 +13,12 @@ namespace B9_Pagination
         private readonly int _totalPages;
         private readonly int _totalCount;
 
+        // TODO: protected internal constructor and add IEnumerable extensions
         public Pager(int totalCount, int pageNumber, int pageSize)
         {
             _totalCount = totalCount;
             _pageNumber = pageNumber;
-            _totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+            _totalPages = (int) Math.Ceiling((double) totalCount / pageSize);
             CurrentItemNumber = (pageNumber - 1) * pageSize;
             PageSize = pageSize;
         }
@@ -34,14 +35,6 @@ namespace B9_Pagination
                 Items = Enumerable.Empty<TData>()
             };
 
-        public PaginationResult<TData> GetPagination(IList<TData> items)
-            => new()
-            {
-                PageSize = PageSize,
-                TotalItems = _totalCount,
-                Items = items
-            };
-
         public PaginationResult<TData> GetPagination(IEnumerable<TData> items)
             => new()
             {
@@ -50,7 +43,10 @@ namespace B9_Pagination
                 Items = items
             };
 
-        public async Task<IEnumerable<T>> GetPaginatedItemsAsync<T>(IQueryable<T> items, CancellationToken cancellationToken = default) where T : class
+        public async Task<IEnumerable<T>> GetPaginatedItemsAsync<T>(
+            IQueryable<T> items,
+            CancellationToken cancellationToken = default)
+            where T : class
         {
             if (!IsValidPage)
                 return Enumerable.Empty<T>();

@@ -2,15 +2,15 @@
 
   <PropertyGroup>
     <PackageId>B9_Pagination</PackageId>
-    <PackageIcon>icon_B9.png</PackageIcon>
-    <PackageIconUrl />
     <PackageVersion>1.1.0</PackageVersion>
     <PackageTags>pager, pagination, paginator, b9, B9, B9_Pagination, Pagination_B9</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageProjectUrl>https://github.com/BodiKBorN/B9_Pagination/blob/master/README.md</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/BodiKBorN/B9_Pagination</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon_B9.png</PackageIcon>
+    <PackageIconUrl />
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>default</LangVersion>
     <Authors>Chepa Bohdan (B9)</Authors>
