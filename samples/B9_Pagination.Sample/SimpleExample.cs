@@ -1,5 +1,7 @@
 using System.Text.Json;
-using B9_Pagination.Interfaces;
+using B9_Pagination.Abstractions;
+using B9_Pagination.Queryable;
+
 namespace B9_Pagination.Sample;
 
 public static class SimpleExample
@@ -23,7 +25,7 @@ public static class SimpleExample
     {
         itemsQuery = itemsQuery
             .Where(x => x.Id > 10);
-        
+
         var pager = await itemsQuery.GetPagerAsync<User>(pagination);
         var items = await pager.GetPaginatedItemsAsync(itemsQuery);
 

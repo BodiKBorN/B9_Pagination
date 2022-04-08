@@ -1,4 +1,4 @@
-﻿using B9_Pagination;
+﻿using B9_Pagination.Abstractions;
 using B9_Pagination.Sample;
 using MockQueryable.Moq;
 
@@ -7,7 +7,7 @@ var userRepositoryMock = Enumerable.Range(1, 39)
     .AsQueryable()
     .BuildMockDbSet();
 
-var items = userRepositoryMock.Object.AsQueryable();
+var items = userRepositoryMock.Object;
 
 var pagination = new PaginationQuery(1, 10);
 

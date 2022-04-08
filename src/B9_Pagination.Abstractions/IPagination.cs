@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace B9_Pagination.Interfaces
+﻿namespace B9_Pagination.Abstractions
 {
     public interface IPagination<TData> where TData : class
     {

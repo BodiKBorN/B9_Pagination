@@ -1,8 +1,10 @@
-using B9_Pagination.Interfaces;
+using B9_Pagination.Abstractions;
+using B9_Pagination.Queryable;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MockQueryable.Moq;
 using Moq;
+
 namespace B9_Pagination.APISample.Controllers;
 
 [ApiController]
@@ -15,9 +17,8 @@ public class WeatherForecastController : ControllerBase
     };
 
     private readonly Mock<DbSet<WeatherForecast>> _mockWeatherRepository;
-    private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController()
     {
         _mockWeatherRepository = Enumerable.Range(1, 31)
             .Select(index => new WeatherForecast
@@ -28,7 +29,6 @@ public class WeatherForecastController : ControllerBase
             })
             .AsQueryable()
             .BuildMockDbSet();
-        _logger = logger;
     }
 
     [HttpGet("pagination-with-defaultModel")]

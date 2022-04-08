@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <PackageId>B9_Pagination</PackageId>
+        <PackageId>B9_Pagination.Abstractions</PackageId>
         <PackageVersion>1.1.0</PackageVersion>
         <PackageTags>pager, pagination, paginator, b9, B9, B9_Pagination, Pagination_B9</PackageTags>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -19,22 +19,15 @@
         <Copyright>Copyright (c) 2022 Chepa Bohdan (B9)</Copyright>
         <Description>Extensions for simple pagination</Description>
 
-        <TargetFramework>netstandard2.1</TargetFramework>
-        <LangVersion>default</LangVersion>
-        <UserSecretsId>c93ff0b3-6b49-4442-bc6e-d240e2d33ed8</UserSecretsId>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\..\assets\icon_B9.png">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
+        <None Include="..\..\assets\icon_B9.png" Pack="true" PackagePath=""/>
         <None Include="..\..\README.md" Pack="true" PackagePath=""/>
-    </ItemGroup>
-
-    <ItemGroup>
-        <ProjectReference Include="..\B9_Pagination.Abstractions\B9_Pagination.Abstractions.csproj"/>
     </ItemGroup>
 
 </Project>

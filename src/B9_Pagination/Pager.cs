@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+using B9_Pagination.Abstractions;
 
 namespace B9_Pagination
 {
@@ -42,16 +40,5 @@ namespace B9_Pagination
                 TotalItems = _totalCount,
                 Items = items
             };
-
-        public async Task<IEnumerable<T>> GetPaginatedItemsAsync<T>(
-            IQueryable<T> items,
-            CancellationToken cancellationToken = default)
-            where T : class
-        {
-            if (!IsValidPage)
-                return Enumerable.Empty<T>();
-
-            return await items.Page(CurrentItemNumber, PageSize).ToArrayAsync(cancellationToken);
-        }
     }
 }
