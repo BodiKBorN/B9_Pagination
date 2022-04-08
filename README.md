@@ -19,7 +19,7 @@ var paginationResult = await items
     .Where(x => x.Id > 10)
     .GetPaginationAsync(pageNumber: 1, pageSize: 10);
 ```
-*Check out the [sample project](https://github.com/BodiKBorN/B9_Pagination/blob/release/1.1/samples/B9_Pagination.Sample/Program.cs)*
+*Check out the [sample project](https://github.com/BodiKBorN/B9_Pagination/tree/dev/samples/B9_Pagination.Sample)*
 
 You can use pagination in API endpoints
 ```
@@ -32,6 +32,7 @@ public async Task<IActionResult> GetClientAccounts(
        CancellationToken cancellationToken = default)
        => (await _accountService.GetAccountsAsync(pagination, filter, sortBy, cancellationToken)).ToActionResult();
 ```
+*Check out the [sample project](https://github.com/BodiKBorN/B9_Pagination/tree/dev/samples/B9_Pagination.APISample)*
 
 #### What if you need to do something(Select,Where,GroupBy,etc) with the data before doing pagination?
 
