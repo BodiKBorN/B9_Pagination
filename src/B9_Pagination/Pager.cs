@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+using B9_Pagination.Abstractions;
 
 namespace B9_Pagination
 {
@@ -13,6 +11,7 @@ namespace B9_Pagination
         private readonly int _totalPages;
         private readonly int _totalCount;
 
+        // TODO: protected internal constructor and add IEnumerable extensions
         public Pager(int totalCount, int pageNumber, int pageSize)
         {
             _totalCount = totalCount;
@@ -26,36 +25,10 @@ namespace B9_Pagination
         public int PageSize { get; }
         public bool IsValidPage => _pageNumber > 0 && _pageNumber <= _totalPages;
 
-        public PaginationResult<TData> GetEmptyPagination()
-            => new()
-            {
-                PageSize = PageSize,
-                TotalItems = 0,
-                Items = Enumerable.Empty<TData>()
-            };
+        public IPagination<TData> GetEmptyPagination()
+            => new Pagination<TData>(PageSize, 0, Enumerable.Empty<TData>());
 
-        public PaginationResult<TData> GetPagination(IList<TData> items)
-            => new()
-            {
-                PageSize = PageSize,
-                TotalItems = _totalCount,
-                Items = items
-            };
-
-        public PaginationResult<TData> GetPagination(IEnumerable<TData> items)
-            => new()
-            {
-                PageSize = PageSize,
-                TotalItems = _totalCount,
-                Items = items
-            };
-
-        public async Task<IEnumerable<T>> GetPaginatedItemsAsync<T>(IQueryable<T> items, CancellationToken cancellationToken = default) where T : class
-        {
-            if (!IsValidPage)
-                return Enumerable.Empty<T>();
-
-            return await items.Page(CurrentItemNumber, PageSize).ToArrayAsync(cancellationToken);
-        }
+        public IPagination<TData> GetPagination(IEnumerable<TData> items)
+            => new Pagination<TData>(PageSize, _totalCount, items);
     }
 }

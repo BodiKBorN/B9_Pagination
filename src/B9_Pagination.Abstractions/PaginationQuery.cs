@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace B9_Pagination
+namespace B9_Pagination.Abstractions
 {
     [Bindable(BindableSupport.Yes)]
     public record PaginationQuery
