@@ -16,7 +16,7 @@ namespace B9_Pagination
         {
             _totalCount = totalCount;
             _pageNumber = pageNumber;
-            _totalPages = (int) Math.Ceiling((double) totalCount / pageSize);
+            _totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
             CurrentItemNumber = (pageNumber - 1) * pageSize;
             PageSize = pageSize;
         }
@@ -25,20 +25,10 @@ namespace B9_Pagination
         public int PageSize { get; }
         public bool IsValidPage => _pageNumber > 0 && _pageNumber <= _totalPages;
 
-        public PaginationResult<TData> GetEmptyPagination()
-            => new()
-            {
-                PageSize = PageSize,
-                TotalItems = 0,
-                Items = Enumerable.Empty<TData>()
-            };
+        public IPagination<TData> GetEmptyPagination()
+            => new Pagination<TData>(PageSize, 0, Enumerable.Empty<TData>());
 
-        public PaginationResult<TData> GetPagination(IEnumerable<TData> items)
-            => new()
-            {
-                PageSize = PageSize,
-                TotalItems = _totalCount,
-                Items = items
-            };
+        public IPagination<TData> GetPagination(IEnumerable<TData> items)
+            => new Pagination<TData>(PageSize, _totalCount, items);
     }
 }

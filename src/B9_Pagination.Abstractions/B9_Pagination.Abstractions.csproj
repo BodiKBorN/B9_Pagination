@@ -10,7 +10,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageIcon>icon_B9.png</PackageIcon>
-        <PackageIconUrl/>
+        <PackageIconUrl />
         <Authors>Chepa Bohdan (B9)</Authors>
         <Product>Pagination</Product>
         <Company>B9</Company>
@@ -26,8 +26,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\..\assets\icon_B9.png" Pack="true" PackagePath=""/>
-        <None Include="..\..\README.md" Pack="true" PackagePath=""/>
+        <None Include="..\..\assets\icon_B9.png" Pack="true" PackagePath="" />
+        <None Include="..\..\README.md" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>
